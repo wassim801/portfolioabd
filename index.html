@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abderrahmen Hadded | L'Art du Geste Culinaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@200;400;600&display=swap');
+        
+        :root {
+            --gold: #b39359;
+            --bg-dark: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        
+        .hero-bg {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(179, 147, 89, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        #imageModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-link {
+            letter-spacing: 0.2em;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-[100] px-8 py-6 flex justify-between items-center bg-black/40 backdrop-blur-md">
+        <div class="text-xl font-serif tracking-[0.3em] text-white">
+            HADDED <span class="text-gold">.</span>
+        </div>
+        <div class="hidden md:flex space-x-10">
+            <a href="#about" class="nav-link text-white hover:text-gold transition">Philosophie</a>
+            <a href="#formation" class="nav-link text-white hover:text-gold transition">Formation</a>
+            <a href="#experience" class="nav-link text-white hover:text-gold transition">Expérience</a>
+            <a href="#gallery" class="nav-link text-white hover:text-gold transition">Galerie</a>
+            <a href="#contact" class="nav-link text-gold font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg">
+        <div class="text-center z-10 px-6">
+            <h2 class="text-gold uppercase tracking-[0.5em] text-[10px] mb-4">Commis de Cuisine | Lyon & PACA</h2>
+            <h1 class="text-6xl md:text-8xl font-extralight mb-6 tracking-tighter">Abderrahmen <span class="italic font-serif text-gold">Hadded</span></h1>
+            <div class="section-divider"></div>
+            <p class="max-w-2xl mx-auto text-gray-400 font-light text-lg leading-relaxed mb-10 italic">
+                "La cuisine est le langage du cœur. Chaque dressage est une promesse de perfection."
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#gallery" class="border border-gold text-gold px-10 py-3 text-[10px] tracking-[0.3em] uppercase hover:bg-gold hover:text-black transition duration-500">
+                    Mes Réalisations
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Philosophie -->
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <img src="c9ffa9f2-9b96-4c5c-a6e8-5eafcbc44d83.jfif" onerror="this.src='https://images.unsplash.com/photo-1583394060212-2810a1571203?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" class="w-full grayscale rounded-sm shadow-2xl z-10 relative transform scale-110" alt="Chef Hadded">
+                <div class="absolute -inset-4 border border-gold/20 -z-0 translate-x-6 translate-y-6"></div>
+            </div>
+            <div>
+                <h3 class="text-gold uppercase tracking-[0.4em] text-[10px] mb-4">Mon Engagement</h3>
+                <h2 class="text-5xl font-serif italic mb-8">La Cuisine est ma Vie.</h2>
+                <p class="text-gray-400 font-light leading-loose mb-6">
+                    Formé dans la rigueur des brigades lyonnaises, j'ai appris que l'excellence ne souffre d'aucune approximation. Mon passage chez <span class="text-white italic">Giardino by Cavalo</span> a affiné ma technique et ma rapidité d'exécution.
+                </p>
+                <p class="text-gray-400 font-light leading-loose mb-8">
+                    Je ne vois pas le "coup de feu" comme un stress, mais comme une symphonie où chaque geste doit être précis. Mon objectif est d'apporter ma discipline et ma passion au service de votre identité culinaire.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="border-l border-gold pl-4">
+                        <span class="block text-2xl font-serif text-white uppercase">Rigueur</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest">Discipline Lyonnaise</span>
+                    </div>
+                    <div class="border-l border-gold pl-4">
+                        <span class="block text-2xl font-serif text-white uppercase">Passion</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest">Amour du produit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section (NEW Ducasse focus) -->
+    <section id="formation" class="bg-zinc-900/50 py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-serif italic mb-4 text-white">L'Excellence Académique</h2>
+            <div class="section-divider"></div>
+            <div class="mt-12 p-12 border border-gold/10 bg-black/20">
+                <img src="https://upload.wikimedia.org/wikipedia/fr/b/bd/Logo-ecole-ducasse.png" onerror="this.style.display='none'" class="h-16 mx-auto mb-8 opacity-80">
+                <h3 class="text-2xl font-serif text-gold mb-2">École Ducasse</h3>
+                <p class="text-[10px] tracking-[0.4em] uppercase text-gray-500 mb-6">Paris Campus (Meudon)</p>
+                <p class="text-gray-400 font-light leading-relaxed italic text-sm">
+                    "Perfectionnement technique intensif axé sur les cuissons de précision, les jus contemporains et l'art du dressage signature."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expérience Section -->
+    <section id="experience" class="bg-zinc-900/50 py-32 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-serif italic mb-4 text-white text-center">Mon Parcours</h2>
+            <div class="section-divider"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mt-16">
+                <div class="feature-card p-8">
+                    <h3 class="text-gold text-xl font-serif mb-2">Giardino by Cavalo</h3>
+                    <p class="text-gray-500 text-sm mb-4">Lyon (69) | Fév 2024 - Jan 2026</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cuisine italienne bistronomique forte volume (80-100 couverts). Gestion des cuissons courtes, dressage minute sous pression, et maintien d'un poste irréprochable durant tout le service.
+                    </p>
+                </div>
+                
+                <div class="feature-card p-8">
+                    <h3 class="text-gold text-xl font-serif mb-2">Cavalo Pendant</h3>
+                    <p class="text-gray-500 text-sm mb-4">Lyon (69) | Juin 2023 - Jan 2024</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Responsable poste froid (entrées et desserts). Dressage minutieux selon fiches techniques, application rigoureuse du PMS, et gestion des rotations FIFO.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <div class="inline-flex flex-wrap gap-8 justify-center">
+                    <div class="text-center">
+                        <span class="block text-3xl font-serif text-gold">2 ans</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest">Expérience Brigade</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-serif text-gold">100+</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest">Couverts/Service</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-serif text-gold">4</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest">Langues</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="gallery" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-5xl font-serif italic text-white">Le Geste & L'Assiette</h2>
+                <p class="text-gold uppercase tracking-[0.3em] text-[10px]">Galerie Culinaire</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="h-80 overflow-hidden group cursor-pointer" onclick="openModal(this.children[0].src)">
+                    <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
+                </div>
+                <div class="h-80 overflow-hidden group cursor-pointer" onclick="openModal(this.children[0].src)">
+                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
+                </div>
+                <div class="h-80 overflow-hidden group cursor-pointer" onclick="openModal(this.children[0].src)">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700 transform group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-40 bg-black text-center px-6">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-gold uppercase tracking-[0.5em] text-[10px] mb-8">Disponible immédiatement</h2>
+            <h3 class="text-5xl font-serif italic mb-16 text-white">Prêt pour un nouveau défi</h3>
+            <div class="space-y-8">
+                <a href="tel:0753605530" class="block text-3xl font-serif text-white hover:text-gold transition">07 53 60 55 30</a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:Hadded2022@gmail.com" class="inline-block bg-gold text-black px-12 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition duration-500">
+                        Me Recruter
+                    </a>
+                    <a href="ABDERRAHMEN_HADDED_FlowCV_Resume_2026-04-07.pdf" download class="inline-flex items-center gap-2 border border-gold text-gold px-12 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-gold hover:text-black transition duration-500 transform hover:scale-105">
+                        <i class="fas fa-download"></i>
+                        Télécharger CV
+                    </a>
+                </div>
+                <p class="text-sm text-gray-500 mt-6"> Le Cannet (06) / Lyon | Disponible immédiatement</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-zinc-700 text-[9px] uppercase tracking-[0.5em]">
+        Abderrahmen Hadded &copy; 2026 | L'excellence Culinaire
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" onclick="this.style.display='none'">
+        <img id="modalImg" src="" class="max-w-[90%] max-h-[85%] border border-gold/30">
+    </div>
+
+    <script>
+        function openModal(url) {
+            document.getElementById('modalImg').src = url;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
